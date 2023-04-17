@@ -4,7 +4,7 @@
 </a>
 
 <p align="center">
-  Building blocks for your Next project
+ Update
 </p>
 
 <p align="center">
