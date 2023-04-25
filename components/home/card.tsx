@@ -49,19 +49,18 @@ export default function Card({
 }) {
   return (
     <div
-      className={`relative col-span-1 rounded-xl border border-gray-200 bg-black px-3 shadow-md ${
+      className={`relative col-span-1 rounded-xl border-gray-100 bg-black px-3 shadow-md ${
         large ? "md:col-span-2" : ""
       }`}
     >
-        <div className="flex flex-wrap text-left items-center justify-center">
-          {inputForm}
-          </div>
+      <div className="flex flex-wrap items-center justify-center text-left">
+        {inputForm}
+      </div>
 
       <div className="mb-20 mt-20">
         <div className="relative mx-auto flex h-60 items-center justify-center">
           {demo}
         </div>
-
       </div>
       <div
         className={`relative mx-auto mt-5 max-w-2xl ${
@@ -83,7 +82,7 @@ export default function Card({
                       {dayOfWeek[date?.getDay()]}, {months[date?.getMonth()]}{" "}
                       {date?.getDate()}, {date?.getFullYear()}
                     </div>
-                    {timeSlot}
+                    <div>{timeSlot}</div>
                   </em>
                 </div>
               </>

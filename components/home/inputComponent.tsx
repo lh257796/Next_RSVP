@@ -71,7 +71,7 @@ const InputComponent = () => {
                 disabled
                 className="mt-10 rounded-md bg-gray-500 py-2 px-4 font-bold text-white focus:outline-none"
               >
-                Fill out fields
+                Register
               </button>
             )}
           </div>
