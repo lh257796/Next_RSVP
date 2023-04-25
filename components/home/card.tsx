@@ -29,16 +29,15 @@ const dayOfWeek = [
 export default function Card({
   title,
   venue,
-  form,
   date,
   timeSlot,
   venueDescription,
   eventDescription,
   demo,
   large,
+  inputForm,
 }: {
-  title: string;
-  form?: boolean;
+  title?: string;
   venue?: string;
   date?: Date;
   timeSlot?: string;
@@ -46,17 +45,23 @@ export default function Card({
   eventDescription?: string;
   demo?: ReactNode;
   large?: boolean;
+  inputForm?: ReactNode;
 }) {
   return (
     <div
-      className={`relative px-3 col-span-1 h-auto overflow-hidden rounded-xl border border-gray-200 bg-black pb-12 shadow-md ${
+      className={`relative col-span-1 rounded-xl border border-gray-200 bg-black px-3 shadow-md ${
         large ? "md:col-span-2" : ""
       }`}
     >
+        <div className="flex flex-wrap text-left items-center justify-center">
+          {inputForm}
+          </div>
+
       <div className="mb-20 mt-20">
         <div className="relative mx-auto flex h-60 items-center justify-center">
           {demo}
         </div>
+
       </div>
       <div
         className={`relative mx-auto mt-5 max-w-2xl ${
@@ -66,6 +71,7 @@ export default function Card({
         <h2 className="mx-1 bg-gradient-to-br from-gray-100 to-orange-300 bg-clip-text font-display text-xl font-bold text-transparent md:text-3xl md:font-normal">
           <Balancer>{title}</Balancer>
         </h2>
+
         <div className="mx-1 -mt-1.5 leading-normal text-white">
           <Balancer>
             {date && (
@@ -74,9 +80,8 @@ export default function Card({
                 <div className="mt-1 mb-1 text-gray-400">
                   <em>
                     <div style={{ display: "inline", marginRight: "21%" }}>
-                      {dayOfWeek[date?.getDay()]},{" "}
-                      {months[date?.getMonth()]} {date?.getDate()},{" "}
-                      {date?.getFullYear()}
+                      {dayOfWeek[date?.getDay()]}, {months[date?.getMonth()]}{" "}
+                      {date?.getDate()}, {date?.getFullYear()}
                     </div>
                     {timeSlot}
                   </em>

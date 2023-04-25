@@ -8,6 +8,7 @@ import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
 import DetailsComponent from "@/components/home/detailsComponent";
+import InputComponent from "@/components/home/inputComponent";
 
 export default function Home() {
   return (
@@ -88,6 +89,7 @@ export default function Home() {
             timeSlot,
             large,
             venue,
+            inputForm
           }) => (
             <Card
               key={title}
@@ -105,6 +107,7 @@ export default function Home() {
               venue={venue}
               date={date}
               timeSlot={timeSlot}
+              inputForm={inputForm}
             />
           ),
         )}
@@ -127,17 +130,15 @@ const features = [
     venueDescription:
       "The Bowery Ballroom is a historic music venue located in the Lower East Side of Manhattan, New York City. This intimate, three-level space boasts a capacity of 575, offering patrons an up-close experience with their favorite artists.",
     large: true,
-    eventDescription:`Join us for a spooktacular night at our Halloween Dance Party! Unleash your inner ghoul on October 31st, from 8 PM to midnight, at the Bowery Ballroom.`,
+    eventDescription:`Join us for a spooktacular night at our Halloween Dance Party! Unleash your inner ghoul on October 31st at the Bowery Ballroom.`,
     demo: <DetailsComponent />,
     venue: "Bowery Ballroom",
     date: new Date(2023, 9, 31),
     timeSlot: "6:00 PM - 11:00 PM",
   },
   {
-    title: "Input field form",
-    form: true,
     // large: true,
-    demo: <WebVitals />,
+    inputForm: <InputComponent />,
     // venue: "hello",
   },
   // {
