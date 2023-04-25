@@ -12,7 +12,7 @@ const InputComponent = () => {
   };
   return (
     <div className="flex -mb-20 pt-1 max-h-screen items-center justify-center bg-black text-white">
-      <form className="w-full max-w-md">
+      <form className="w-full max-w-md" onSubmit={handleSubmit}>
         <div className="flex flex-wrap">
           <div className="w-full ">
             <label className="mb-1 block" htmlFor="first-name">
@@ -58,11 +58,9 @@ const InputComponent = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-
           <div className="flex w-full justify-center">
             {!!firstName && !!lastName && email.split('').includes('@') ? (
               <button
-                onClick={handleSubmit}
                 type="submit"
                 className="mt-10 rounded-md bg-orange-400 py-2 px-4 font-bold text-white hover:bg-orange-300 focus:outline-none"
               >
