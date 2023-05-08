@@ -32,7 +32,7 @@ export default function Layout({
       <div
         className={`fixed top-15 w-full ${
           scrolled
-            ? "border-b bg-black/10 backdrop-blur-xl"
+            ? "border-b bg-black/10 "
             : "border-b bg-black/10"
         } z-30 transition-all`}
       >

@@ -88,7 +88,7 @@ export default function Card({
               </>
             )}
 
-            <div className="mt-2 text-sm">{eventDescription}</div>
+            <div className="mt-1 text-sm">{eventDescription}</div>
             <br />
           </Balancer>
           <em className="text-xs">
